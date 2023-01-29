@@ -81,3 +81,11 @@ E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\obj\Debug\net6.0\refint\
 E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\obj\Debug\net6.0\ECommerce.API.pdb
 E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\obj\Debug\net6.0\ECommerce.API.genruntimeconfig.cache
 E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\obj\Debug\net6.0\ref\ECommerce.API.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\Humanizer.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\Mono.TextTemplating.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\System.CodeDom.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\System.Text.Json.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
