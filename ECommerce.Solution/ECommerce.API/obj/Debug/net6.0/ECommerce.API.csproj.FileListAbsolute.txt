@@ -89,3 +89,6 @@ E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\System.
 E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\System.Text.Json.dll
 E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\AutoMapper.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\Projekti\E-Commerce\ECommerce.Solution\ECommerce.API\bin\Debug\net6.0\ECommerce.API.staticwebassets.runtime.json
