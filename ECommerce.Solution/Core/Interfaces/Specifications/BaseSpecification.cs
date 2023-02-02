@@ -9,6 +9,7 @@ namespace Core.Interfaces.Specifications
 {
     public class BaseSpecification<T> : ISpecification<T>
     {
+        public List<string> IncludeStrings { get; } = new List<string>();
         public BaseSpecification()
         {
 
@@ -20,6 +21,11 @@ namespace Core.Interfaces.Specifications
 
         public Expression<Func<T, bool>> Criteria { get; }
         public List<Expression<Func<T, object>>> Includes { get; } = new List<Expression<Func<T, object>>>();
+
+        protected void AddInclude(string includeString)
+        {
+            IncludeStrings.Add(includeString);
+        }
 
         protected void AddInclude(Expression<Func<T, object>> includeExpression)
         { 
