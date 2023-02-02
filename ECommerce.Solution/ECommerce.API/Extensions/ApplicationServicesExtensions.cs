@@ -9,7 +9,7 @@ namespace ECommerce.API.Extensions
 {
     public static class ApplicationServicesExtensions
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration) 
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
@@ -42,6 +42,16 @@ namespace ECommerce.API.Extensions
 
                     return new BadRequestObjectResult(errorResponse);
                 };
+            });
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CorsPolicy", policy =>
+                {
+                     policy.AllowAnyOrigin()
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
             });
             return services;
         }

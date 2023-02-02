@@ -20,9 +20,27 @@ namespace Infrastructure.Data
                 query = query.Where(specification.Criteria);
             }
 
-            query = specification.IncludeStrings.Aggregate(query,
-                                                             (current, include) =>
-                                                            current.Include(include));
+            if (specification.IncludeStrings != null)
+            {
+                query = specification.IncludeStrings.Aggregate(query,
+                                                              (current, include) =>
+                                         current.Include(include));
+            }
+
+            if (specification.OrderByAsc!=null)
+            {
+                query = query.OrderBy(specification.OrderByAsc);
+            }
+
+            if (specification.OrderByDesc != null)
+            {
+                query = query.OrderByDescending(specification.OrderByDesc);
+            }
+
+            if (specification.isPagingEnabled)
+            {
+                query = query.Skip(specification.Skip).Take(specification.Take);
+            }
 
             query = specification.Includes.Aggregate(query, (current, include) => current.Include(include));
 

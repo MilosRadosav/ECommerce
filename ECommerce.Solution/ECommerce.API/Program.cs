@@ -26,12 +26,9 @@ app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
     app.UseSwagger();
     app.UseSwaggerUI();
-
-
-
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors();
 
 app.UseAuthorization();
 

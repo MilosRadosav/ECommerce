@@ -3,6 +3,7 @@ using Core.Interfaces;
 using Core.Interfaces.Specifications;
 using ECommerce.API.DTO;
 using ECommerce.API.Errors;
+using ECommerce.API.Helpers;
 using ECommerce.Core.Core.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,14 +28,18 @@ namespace ECommerce.API.Controllers
             _mapper = mapper;
         }
         [HttpGet("get-products")]
-        public async Task<ActionResult<List<ProductDto>>> GetProducts() 
+        public async Task<ActionResult<Pagination<ProductDto>>> GetProducts([FromQuery]ProductSpecificationParameters productParameters) 
         {
-            var specification = new ProductsWithTypesAndBrandsSpecification();
+            var specification = new ProductsWithTypesAndBrandsSpecification(productParameters);
+            var countSpecification = new ProductWithFiltersForCountSpecification(productParameters);
+
+            var totalItems = await _productsRepository.CountAsync(countSpecification);
+
             var resultFromDb = await _productsRepository.ListAsync(specification);
 
             var resutToReturn = _mapper.Map<List<ProductDto>>(resultFromDb);
 
-            return  Ok(resutToReturn);
+            return  Ok(new Pagination<ProductDto>(productParameters.PageIndex,productParameters.PageSize,totalItems, resutToReturn));
         }
         
         [HttpGet("get-product-by-id/{id}")]
